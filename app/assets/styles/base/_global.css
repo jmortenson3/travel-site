@@ -7,3 +7,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+* {
+  /* padding, etc. will honor the set width of boxes */
+  box-sizing: border-box;
+}
