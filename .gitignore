@@ -12,6 +12,7 @@
 node_modules/
 .tmp/
 
+
 # OS or Editor folders
 .DS_Store
 Thumbs.db
@@ -27,3 +28,7 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
+gulpfile.js
+gulp/
+notes.txt
+.vscode/
