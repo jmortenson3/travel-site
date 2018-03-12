@@ -12,3 +12,7 @@ img {
   /* padding, etc. will honor the set width of boxes */
   box-sizing: border-box;
 }
+
+a {
+  color: $mainOrange;
+}
