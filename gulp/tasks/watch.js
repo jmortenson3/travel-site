@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('watch', function() {
   browserSync.init({
+    open: false,
     server: {
       baseDir: 'app'
     }
@@ -15,8 +16,14 @@ gulp.task('watch', function() {
 
   watch('./app/assets/styles/**/*.css', function() {
     gulp.start('cssInject');
-  })
+  });
+
+  watch('./app/assets/scripts/**/*.js', function() {
+    gulp.start('scriptsRefresh');
+  });
 });
+
+
 
 // array of dependencies that must first complete 
 // before cssInject runs
@@ -25,4 +32,8 @@ gulp.task('watch', function() {
 gulp.task('cssInject', ['styles'], function() {
   return gulp.src('./app/tmp/styles/styles.css')
     .pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh', ['scripts'], function() {
+  browserSync.reload();
 });

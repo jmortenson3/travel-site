@@ -13,4 +13,6 @@
 @import "modules/_testimonial";
 @import "modules/_row";
 @import "modules/_generic-content-container";
+@import "modules/_primary-nav";
+@import "modules/_site-header";
 @import "modules/_site-footer";
